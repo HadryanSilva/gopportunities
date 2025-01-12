@@ -17,7 +17,6 @@ import (
 // @Param request body CreateOpeningRequest true "Request Body"
 // @Success 201 {object} CreateOpeningResponse
 // @Failure 400 {object} ErrorResponse
-// @Failure 404 {object} ErrorResponse
 // @Failure 500 {object} ErrorResponse
 // @Router /opening [post]
 func CreateOpeningHandler(ctx *gin.Context) {
