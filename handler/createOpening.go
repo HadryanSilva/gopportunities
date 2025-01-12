@@ -7,6 +7,19 @@ import (
 	"net/http"
 )
 
+// CreateOpeningHandler
+// @Base path /api/v1
+// @Summary Create an opening
+// @Description Create a new job opening
+// @Tags openings
+// @Accept json
+// @Produce json
+// @Param request body CreateOpeningRequest true "Request Body"
+// @Success 201 {object} CreateOpeningResponse
+// @Failure 400 {object} ErrorResponse
+// @Failure 404 {object} ErrorResponse
+// @Failure 500 {object} ErrorResponse
+// @Router /opening [post]
 func CreateOpeningHandler(ctx *gin.Context) {
 	request := CreateOpeningRequest{}
 
