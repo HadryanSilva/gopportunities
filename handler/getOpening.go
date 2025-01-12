@@ -7,6 +7,18 @@ import (
 	"net/http"
 )
 
+// GetOpeningHandler
+// @Base path /api/v1
+// @Summary Find an opening
+// @Description Find a job opening
+// @Tags openings
+// @Accept json
+// @Produce json
+// @Param id query string true "Opening identification"
+// @Success 200 {object} GetOpeningResponse
+// @Failure 400 {object} ErrorResponse
+// @Failure 404 {object} ErrorResponse
+// @Router /opening [get]
 func GetOpeningHandler(ctx *gin.Context) {
 	id := ctx.Query("id")
 
