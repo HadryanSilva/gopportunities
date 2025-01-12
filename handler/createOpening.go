@@ -33,8 +33,7 @@ func CreateOpeningHandler(ctx *gin.Context) {
 		return
 	}
 
-	sendSuccess(ctx, "create-opening", opening)
-
+	sendSuccess(ctx, http.StatusCreated, "create-opening", opening)
 }
 
 func InitializeHandler() {
